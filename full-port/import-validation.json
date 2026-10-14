@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/lieren2023/noname-for-dummies",
+  "commit": "e52bf9159ce0d8d6a590b6d8db4cfac3f609930c",
+  "file_count": 14604,
+  "bytes": 1676124066,
+  "excluded": [
+    ".git metadata only"
+  ],
+  "runtime_verified": false,
+  "manifest_sha256": "2fb011bbeff06ab111e78028a6728aed7082f4fccf802a76e4f79f2bff391c28"
+}

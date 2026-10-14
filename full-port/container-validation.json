@@ -1,0 +1,17 @@
+{
+  "status": "experimental_container_verified",
+  "file": "wumingsha-full-runtime-experimental-v0.2.0.nsp",
+  "bytes": 1683513632,
+  "sha256": "cd629110a12a4c6bf6be290379ee28f840bb9dea46ecf3a79dd22b7831453c29",
+  "nca_types": [
+    "Manual",
+    "Program",
+    "Meta",
+    "Control"
+  ],
+  "original_files": 14604,
+  "original_bytes": 1676124066,
+  "content_integrity_verified": true,
+  "switch_runtime_verified": false,
+  "export_fix": "checked buffered writes and fsync; complete file hash verified independently"
+}

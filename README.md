@@ -1,4 +1,12 @@
-# 无名杀 Switch版 — 0.1.1 原生体验版
+# 无名杀 Switch版
+
+**当前目标：完整无名杀懒人包移植。** 0.2.0 已完成完整原包导入、离线网页内容封装和引擎检测 NSP，尚未证明 Switch 上完整可玩。
+
+[完整移植进展与实机检测说明](docs/FULL_PORT.md) · [下载引擎验证 NSP](dist/wumingsha-runtime-probe-v0.2.0.nsp)
+
+下方 0.1.1 内容属于历史原生精简体验版，不是当前要求的完整版。
+
+## 历史版本：0.1.1 原生体验版
 
 基于 [无名杀本体](https://github.com/libccy/noname) 的标准武将规则，以及 [无名杀懒人版](https://github.com/lieren2023/noname-for-dummies) 的标准牌数据、武将立绘和字体，制作的 Nintendo Switch Homebrew 原生精简移植。
 

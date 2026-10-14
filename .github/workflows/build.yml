@@ -18,6 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: make -j2
+      - run: make -C full-port
       - uses: actions/upload-artifact@v4
         with:
           name: noname-switch-nro

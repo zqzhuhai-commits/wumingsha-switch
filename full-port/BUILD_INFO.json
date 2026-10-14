@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/DarkMatterCore/hacPack",
+  "commit": "e506cb58b7843d86df7518156debd28f3b575638",
+  "libnx": "4.12.0",
+  "compiler": "devkitA64 r30 / GCC16.1.0",
+  "tests": [
+    "native -Wall -Wextra -Werror build",
+    "ES5 syntax and report unit tests",
+    "4-NCA content and HtmlDocument CNMT verification"
+  ],
+  "hardware_validation": false
+}

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>无名杀 Switch版 · 完整原包引擎验证</title>
+<style>
+body{background:#352c21;color:#f2e4bf;font:20px sans-serif;margin:24px}h1{font-size:30px;color:#e1bd76;margin:0 0 12px}p{margin:10px 0}button,a{display:inline-block;background:#59432b;color:#ffe9b4;border:1px solid #d8b26b;padding:12px;margin:6px 8px 6px 0;font:20px sans-serif;text-decoration:none}#results{width:100%;border-collapse:collapse}td{border-bottom:1px solid #75654d;padding:6px}td:first-child{width:38%}.good{color:#9be28b}.bad{color:#ffb7a4}.wait{color:#d8c8a8}#report{width:98%;height:110px;background:#211e18;color:#eee;font:14px monospace}small{font-size:16px;color:#c8bda5}
+</style></head><body>
+<h1>无名杀 Switch版 · 完整原包引擎验证</h1>
+<p>检测 Switch 网页组件是否能承载原版懒人包。本页面不包含精简对局规则。</p>
+<small>API 检测通过不代表整包已兼容；需继续验证完整对局、扩展、存档与音频。</small>
+<p><button id="export">保存检测结果并返回</button><button id="sound">测试音频播放</button><a id="game" href="game/index.html">尝试启动完整原包</a></p>
+<p id="payload">正在检查原包状态…</p><table id="results"></table>
+<p id="summary">正在检测…</p><textarea id="report" readonly></textarea>
+<script src="payload-meta.js"></script><script src="probe.js"></script>
+<script type="module" src="module-test.js"></script>
+</body></html>

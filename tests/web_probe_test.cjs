@@ -1,0 +1,23 @@
+const assert=require('node:assert'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+const acorn=require(process.env.ACORN_PATH||'acorn');
+const dir=path.join(__dirname,'../full-port/web');
+acorn.parse(fs.readFileSync(path.join(dir,'probe.js'),'utf8'),{ecmaVersion:5});
+const elements={};
+const el=id=>elements[id]||(elements[id]={style:{},textContent:'',value:'',removeAttribute(){}});
+let deadline;
+const localStorage={getItem(){return null;},setItem(){throw new Error('blocked storage');}};
+const context={document:{getElementById:el,createElement(){return {style:{},addEventListener(){}};}},navigator:{userAgent:'unit-test'},localStorage,Promise,Map,Set,Proxy,Reflect,JSON,URL,Blob,fetch:()=>Promise.resolve({json:()=>Promise.resolve({wumingsha:true})}),setTimeout:f=>{deadline=f;},encodeURIComponent,location:{},window:{WUMINGSHA_PAYLOAD:{included:false}}};
+vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(dir,'probe.js'),'utf8'),context);
+setImmediate(()=>{
+ deadline();
+ const r=JSON.parse(el('report').value);
+ assert.equal(r.results.localStorage.ok,false);
+ assert.equal(r.results.indexedDB.ok,false);
+ assert.equal(r.results.module.ok,false);
+ assert.equal(r.results.dynamicImport.ok,false);
+ assert.equal(r.results.fetch.ok,true);
+ assert.equal(r.payload.included,false);
+ el('export').onclick();assert(context.location.href.startsWith('http://localhost/wumingsha-probe?report='));
+ const exported=JSON.parse(decodeURIComponent(context.location.href.split('report=')[1]));assert.equal(exported.schema,1);
+ console.log('PASS: ES5 bootstrap parsing, blocked storage, module timeout, async fetch and report export logic');
+});
