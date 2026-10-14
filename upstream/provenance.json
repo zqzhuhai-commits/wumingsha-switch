@@ -1,0 +1,27 @@
+{
+  "core": {
+    "repo": "https://github.com/libccy/noname",
+    "commit": "e18a8256e01ab1357e4c7472349dceb3d0aa1a3a"
+  },
+  "dummies": {
+    "repo": "https://github.com/lieren2023/noname-for-dummies",
+    "commit": "e52bf9159ce0d8d6a590b6d8db4cfac3f609930c"
+  },
+  "files": {
+    "upstream/card-standard.js": "a45bb91e14faa3e2503ff0b69c8e807e26f941a190a18dc3b59ef8614cf2c53c",
+    "upstream/character-standard.js": "21651b823ee51dc42463db97f62226995fb29ac8791d7b0231acd6c125fddb6e",
+    "upstream/core/skill.js": "61cc1f2c99dd571a778dfcdb5bca5355f3e58831fecb981efcd217578f554440",
+    "upstream/core/character.js": "f7c9eac831b436ce4d61d6d9cbf2b374df6a5c36fb856fd89527361667cac5fc",
+    "upstream/core/translate.js": "9070be0a3affc21152fd7e9a58a60c3ec52a3084ec7b6ec8b01ba6c9645d454b",
+    "romfs/portraits/guanyu.jpg": "d98484deb5b8d9d4d8c749ad3a39f93e0c481283c50f00526216819978a09e69",
+    "romfs/portraits/zhangfei.jpg": "62ba88100d57a1c82a8495648c28d2501dace2e3bd8b908d11c08cd40222497b",
+    "romfs/portraits/zhaoyun.jpg": "0f6bc219322bb8a11bed9259fbadf70e8a8bd87d5ee8325a177afc7ae225440b",
+    "romfs/portraits/zhouyu.jpg": "3b335d8eb6452245710bd15c5b398a70e3dbe85c1978a369471965198f11ba38",
+    "romfs/font.ttf": "8d8fd872d20fdae1f53edd3afd36579f00a35732a2b8e5da62dadda0c8a9230d"
+  },
+  "original_font": {
+    "source": "font/yuanli.ttf",
+    "sha256": "4531a7af089001ebf683c55e845d71200a74c0d4c039f1b7e8df92fcf852d83e",
+    "transformation": "fonttools subset, glyphs from source and generated data"
+  }
+}

@@ -1,0 +1,14 @@
+CXX ?= g++
+CPPFLAGS += -Iinclude
+CXXFLAGS += -std=c++17 -O2 -Wall -Wextra -Wpedantic
+
+.PHONY: all test clean
+all: noname-desktop
+noname-desktop: source/main.cpp source/engine.cpp include/engine.hpp include/generated_data.hpp
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $$(pkg-config --cflags sdl2 SDL2_image SDL2_ttf) source/main.cpp source/engine.cpp $$(pkg-config --libs sdl2 SDL2_image SDL2_ttf) -o $@
+engine-tests: tests/engine_test.cpp source/engine.cpp include/engine.hpp include/generated_data.hpp
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) tests/engine_test.cpp source/engine.cpp -o $@
+test: engine-tests
+	./engine-tests
+clean:
+	rm -f noname-desktop engine-tests

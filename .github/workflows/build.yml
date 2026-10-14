@@ -1,0 +1,24 @@
+name: Build and test
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make -f Makefile.host test
+  switch:
+    needs: rules
+    runs-on: ubuntu-latest
+    container: devkitpro/devkita64:latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make -j2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: noname-switch-nro
+          path: noname-switch.nro

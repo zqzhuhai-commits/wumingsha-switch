@@ -1,0 +1,8 @@
+/build/
+/noname-switch.elf
+/noname-switch.nro
+/noname-switch.nacp
+/noname-switch.map
+/noname-desktop
+/engine-tests
+__pycache__/

@@ -1,0 +1,55 @@
+{
+  "deck_size": 78,
+  "supported_cards": [
+    "sha",
+    "shan",
+    "tao",
+    "wuzhong",
+    "guohe",
+    "shunshou",
+    "juedou",
+    "nanman",
+    "wanjian",
+    "taoyuan",
+    "zhuge"
+  ],
+  "heroes": [
+    {
+      "id": "guanyu",
+      "name": "关羽",
+      "faction": "shu",
+      "hp": 4,
+      "upstream_skills": [
+        "wusheng"
+      ]
+    },
+    {
+      "id": "zhangfei",
+      "name": "张飞",
+      "faction": "shu",
+      "hp": 4,
+      "upstream_skills": [
+        "paoxiao"
+      ]
+    },
+    {
+      "id": "zhaoyun",
+      "name": "赵云",
+      "faction": "shu",
+      "hp": 4,
+      "upstream_skills": [
+        "longdan"
+      ]
+    },
+    {
+      "id": "zhouyu",
+      "name": "周瑜",
+      "faction": "wu",
+      "hp": 3,
+      "upstream_skills": [
+        "yingzi",
+        "fanjian"
+      ]
+    }
+  ]
+}
