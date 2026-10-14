@@ -1,4 +1,4 @@
-# 无名杀 Switch Native — 0.1.0 原生体验版
+# 无名杀 Switch版 — 0.1.1 原生体验版
 
 基于 [无名杀本体](https://github.com/libccy/noname) 的标准武将规则，以及 [无名杀懒人版](https://github.com/lieren2023/noname-for-dummies) 的标准牌数据、武将立绘和字体，制作的 Nintendo Switch Homebrew 原生精简移植。
 
@@ -6,13 +6,21 @@
 
 ## 下载与安装
 
-[下载 noname-switch.nro](dist/switch/noname-switch/noname-switch.nro) · [下载 SD 卡安装包](dist/noname-switch-v0.1.0-sd.zip)
+[下载独立 NSP 应用包](dist/sanguosha-switch-v0.1.1.nsp) · [NSP 安装与重新打包说明](docs/NSP.md)
+
+NSP 内含程序、中文名称、图标和全部素材，安装后从主菜单启动。需要支持自制 NSP 安装和运行的系统环境；尚未实机验证。以下 NRO 安装方式继续保留。
+
+[下载 noname-switch.nro](dist/switch/noname-switch/noname-switch.nro) · [下载 SD 卡安装包](dist/noname-switch-v0.1.1-sd.zip)
 
 1. 将安装包内的 `switch` 文件夹复制到 SD 卡根目录。最终路径为 `sd:/switch/noname-switch/noname-switch.nro`。
 2. 在支持 Homebrew 的 Switch 中启动 hbmenu。建议从已安装游戏按住 R 进入完整应用模式。
-3. 选择 **Noname Switch Native**，选将后按 A 开始。
+3. 选择 **无名杀 Switch版**，选将后按 A 开始。
 
-NRO 内嵌字体和立绘，不需要网页服务、电脑伴随运行或外部素材目录。官方未修改系统不能直接启动 NRO。对局和设置暂不保存，退出即结束当前对局。
+NRO 内嵌字体、桌面纹理和卡牌/武将素材，不需要网页服务、电脑伴随运行或外部素材目录。官方未修改系统不能直接启动 NRO。对局和设置暂不保存，退出即结束当前对局。
+
+## 界面
+
+按提供的参考图采用棕金色纹理桌面、竖版武将立绘、珠状体力、底部纸质卡牌和操作按钮。桌面、卡牌和花色字体沿用上游素材，来源见 `upstream/ui-assets.json`。
 
 ## 首版玩法
 
@@ -61,13 +69,14 @@ export DEVKITA64=$DEVKITPRO/devkitA64
 make -j2
 ```
 
-输出 `noname-switch.nro`。资产已经放在 `romfs` 中，首次编译不必安装 Python 或下载完整上游仓库。构建工具版本和产物哈希见 [验证报告](docs/VALIDATION.md)。
+输出 `noname-switch.nro`。资产已经放在 `romfs` 中，NRO 首次编译不必安装 Python 或下载完整上游仓库；NSP 打包脚本需要 Python 3。构建工具版本和产物哈希见 [验证报告](docs/VALIDATION.md)。
 
 Linux 桌面验证：安装 SDL2、SDL2_image、SDL2_ttf 开发包后，在仓库根目录运行：
 
 ```sh
 make -f Makefile.host test
 make -f Makefile.host
+make -f Makefile.host test-ui
 ./noname-desktop
 ```
 

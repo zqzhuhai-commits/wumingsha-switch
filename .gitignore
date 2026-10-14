@@ -5,4 +5,12 @@
 /noname-switch.map
 /noname-desktop
 /engine-tests
+/ui-tests
 __pycache__/
+
+# Private packaging inputs and temporary NCA contents
+prod.keys
+title.keys
+keys.dat
+*.keys
+/nsp-build/

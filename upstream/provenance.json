@@ -17,11 +17,34 @@
     "romfs/portraits/zhangfei.jpg": "62ba88100d57a1c82a8495648c28d2501dace2e3bd8b908d11c08cd40222497b",
     "romfs/portraits/zhaoyun.jpg": "0f6bc219322bb8a11bed9259fbadf70e8a8bd87d5ee8325a177afc7ae225440b",
     "romfs/portraits/zhouyu.jpg": "3b335d8eb6452245710bd15c5b398a70e3dbe85c1978a369471965198f11ba38",
-    "romfs/font.ttf": "8d8fd872d20fdae1f53edd3afd36579f00a35732a2b8e5da62dadda0c8a9230d"
+    "romfs/font.ttf": "6398df41dc94580184be59dda4bcdc08cd12dd28313cf11dc478f0e79a41ddbe",
+    "romfs/ui/suits.ttf": "c3eab291d8a77019a5112e96aa8092cf3af2ac0966c99771d946d16ce1b842f2",
+    "romfs/ui/table.jpg": "93ee17da3114f3c4a7572dcd49adb713cd7340ac7db757208ca389e4e0aadf7b",
+    "romfs/ui/cards/zhuge.png": "d6bc04ce8e5f5b774e1880263bea0b0bcb34a475e5091c4ce2ea74a828eb9abf",
+    "romfs/ui/cards/juedou.png": "8abc1ddf72e64e34784addade5212b776f57703994b04a8099d61ea5145405a8",
+    "romfs/ui/cards/tao.png": "665678812be219582b70983409c19472fa1491ad19fdf610f5ddd1409d6a3020",
+    "romfs/ui/cards/wuzhong.png": "44bb2c5e70c961657476691ab3ccd6bebae420b5ec194813ad0e1ea25e42461c",
+    "romfs/ui/cards/nanman.png": "ae0bb28a17590093b66101e955045cd1050848fb555a988bbddc7ab9d9765da2",
+    "romfs/ui/cards/wanjian.png": "0e9677206a1dfe92b3e3564944fcccd1411f68dedca68f9bd05705cd95973ff4",
+    "romfs/ui/cards/shan.png": "ac20b94b5789e89559b600a06bc179e9e6c0474a8fdc5b57be8a739c4f3f2c76",
+    "romfs/ui/cards/shunshou.png": "51ab70fabdef94d7969d140c5864c11387d3eedac1e70daf103975bd6386d391",
+    "romfs/ui/cards/guohe.png": "ddf4fc5bc000aeaf165fc4b0a0e7cd23aa2b530dc665cb1f979f127131e848a5",
+    "romfs/ui/cards/taoyuan.png": "db06129f1987b3f648d79d5cec5013e6f824c2dece113d8f048ee2c96d16a616",
+    "romfs/ui/cards/sha.png": "cf1022e9ac9ba8de1103d1cbb548290466c88ce71800ab1589a5bb4c2b9ab585"
   },
   "original_font": {
     "source": "font/yuanli.ttf",
     "sha256": "4531a7af089001ebf683c55e845d71200a74c0d4c039f1b7e8df92fcf852d83e",
     "transformation": "fonttools subset, glyphs from source and generated data"
+  },
+  "packaging_tools": {
+    "hacBrewPack": {
+      "url": "https://github.com/pplatoon/hacBrewPack",
+      "commit": "56698df456eac4d5076e85499fe045a90fba790b"
+    },
+    "hactool": {
+      "url": "https://github.com/SciresM/hactool",
+      "commit": "1d64a83450e025622f3468c28fc4164dad2c5ef6"
+    }
   }
 }

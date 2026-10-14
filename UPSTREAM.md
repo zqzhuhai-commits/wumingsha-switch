@@ -9,3 +9,5 @@
 `romfs/portraits/*.jpg` 来自懒人版对应的 `image/character/*.jpg`。`romfs/font.ttf` 是懒人版 `font/yuanli.ttf` 的字符子集，仅保留当前界面使用的字符，未改变字体造型。修改文字时需从原字体重新取子集或换为有合适授权的完整中文字体。
 
 本项目新的原生 C++ 实现不是上游 JS 的逐行翻译；卡牌与武将声明数据由脚本提取。未移植上游 DOM、CSS、事件引擎与扩展接口，不能将 JS 扩展复制到 NRO 中使用。详细来源版本和每个随附上游文件的哈希见 `upstream/provenance.json`。
+
+本次界面沿用上游 `image/background/ol_bg.jpg`、`extension/十周年UI/image/card/*.webp` 与 `font/suits.ttf`，逐文件转换说明见 `upstream/ui-assets.json`。图标以关羽立绘叠加最终应用名称制作。NSP 工具与核验工具来源见 `upstream/provenance.json`。

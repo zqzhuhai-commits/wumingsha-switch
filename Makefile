@@ -42,9 +42,9 @@ BUILD		:=	build
 SOURCES		:=	source
 DATA		:=	data
 INCLUDES	:=	include
-APP_TITLE := Noname Switch Native
+APP_TITLE := 无名杀 Switch版
 APP_AUTHOR := noname community / zqzhuhai
-APP_VERSION := 0.1.0
+APP_VERSION := 0.1.1
 ROMFS	:=	romfs
 
 #---------------------------------------------------------------------------------
@@ -85,7 +85,7 @@ export VPATH	:=	$(foreach dir,$(SOURCES),$(CURDIR)/$(dir)) \
 			$(foreach dir,$(DATA),$(CURDIR)/$(dir))
 
 export DEPSDIR	:=	$(CURDIR)/$(BUILD)
-export ROMFS_FILES := $(wildcard $(CURDIR)/romfs/* $(CURDIR)/romfs/portraits/*)
+export ROMFS_FILES := $(wildcard $(CURDIR)/romfs/* $(CURDIR)/romfs/portraits/* $(CURDIR)/romfs/ui/* $(CURDIR)/romfs/ui/cards/*)
 
 CFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
 CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
@@ -193,7 +193,7 @@ all	:	$(OUTPUT).nro
 
 ifeq ($(strip $(NO_NACP)),)
 $(OUTPUT).nro	:	$(OUTPUT).elf $(OUTPUT).nacp
-$(OUTPUT).nro : $(ROMFS_FILES)
+$(OUTPUT).nro : $(ROMFS_FILES) $(APP_ICON)
 else
 $(OUTPUT).nro	:	$(OUTPUT).elf
 endif

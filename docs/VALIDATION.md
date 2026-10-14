@@ -1,4 +1,4 @@
-# 验证记录 — 0.1.0
+# 验证记录 — 0.1.1
 
 验证日期：2026-10-14。
 
@@ -11,9 +11,9 @@
 - Switch AArch64 原生交叉编译成功，编译/链接无警告，未使用专有 SDK。
 - NRO 头 `NRO0` 和内嵌资产头 `ASET` 检查通过。
 
-NRO 文件大小：9,902,373 字节。
+NRO 文件大小：12,412,399 字节。
 
-NRO SHA-256：`433fd18cbd7ec81bf091293ef90f5334e4fcd4313871ea424a40eeef29faa338`。
+NRO SHA-256：`f6c66bc6e7b3abf6a137fe7c26c06e9c1daa2b1ca3e44ac5040f656254b56a6e`。
 
 ## 编译环境
 
@@ -21,6 +21,16 @@ NRO SHA-256：`433fd18cbd7ec81bf091293ef90f5334e4fcd4313871ea424a40eeef29faa338`
 - Switch SDL2 2.28.5；SDL2_image 2.0.4；SDL2_ttf 2.22.0。
 - 构建依赖来自 devkitPro 官方软件包，下载后按官方包数据库 SHA-256 校验。
 - 源码、资源和构建配置随项目提供。CI 使用 devkitPro 官方 Docker 镜像；CI 实际执行结果以 GitHub Actions 为准。
+
+## 新界面与 NSP 验证
+
+- 新桌面样式已实际渲染并检查截图；桌面、武将、卡牌与花色均正确显示。
+- 触屏目标、选牌、翻页、技能开关和暂停行为测试通过。
+- NSP 以独立应用形式打包，包含 Program、Control、Meta 三个 NCA。
+- hactool 独立解密校验：内容超级块、PFS0 哈希表和 IVFC 层级完整性通过；提取的 NSO、所有素材与构建输入逐字节相同。
+- 16 个语言槽位均为“无名杀 Switch版”，支持简体/繁体中文名称，16 个语言图标和应用 Title ID 一致。
+- 自制 NCA / NPDM 不带任天堂零售签名，签名验证显示 FAIL 属于该包的已知特征；内容完整性验证通过并不证明实机可安装。
+- NSP SHA-256：`919f3ba156d769e61205c52c32bc0bd488c4b3daaf2b2dc4a8723b40c572e395`。
 
 ## 尚未验证
 

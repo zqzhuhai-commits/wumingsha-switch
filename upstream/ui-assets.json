@@ -1,0 +1,54 @@
+{
+  "romfs/ui/table.jpg": {
+    "source": "image/background/ol_bg.jpg",
+    "transform": "none"
+  },
+  "romfs/ui/cards/sha.png": {
+    "source": "extension/十周年UI/image/card/sha.webp",
+    "transform": "lossless WEBP to PNG conversion"
+  },
+  "romfs/ui/cards/shan.png": {
+    "source": "extension/十周年UI/image/card/shan.webp",
+    "transform": "lossless WEBP to PNG conversion"
+  },
+  "romfs/ui/cards/tao.png": {
+    "source": "extension/十周年UI/image/card/tao.webp",
+    "transform": "lossless WEBP to PNG conversion"
+  },
+  "romfs/ui/cards/wuzhong.png": {
+    "source": "extension/十周年UI/image/card/wuzhong.webp",
+    "transform": "lossless WEBP to PNG conversion"
+  },
+  "romfs/ui/cards/guohe.png": {
+    "source": "extension/十周年UI/image/card/guohe.webp",
+    "transform": "lossless WEBP to PNG conversion"
+  },
+  "romfs/ui/cards/shunshou.png": {
+    "source": "extension/十周年UI/image/card/shunshou.webp",
+    "transform": "lossless WEBP to PNG conversion"
+  },
+  "romfs/ui/cards/juedou.png": {
+    "source": "extension/十周年UI/image/card/juedou.webp",
+    "transform": "lossless WEBP to PNG conversion"
+  },
+  "romfs/ui/cards/nanman.png": {
+    "source": "extension/十周年UI/image/card/nanman.webp",
+    "transform": "lossless WEBP to PNG conversion"
+  },
+  "romfs/ui/cards/wanjian.png": {
+    "source": "extension/十周年UI/image/card/wanjian.webp",
+    "transform": "lossless WEBP to PNG conversion"
+  },
+  "romfs/ui/cards/taoyuan.png": {
+    "source": "extension/十周年UI/image/card/taoyuan.webp",
+    "transform": "lossless WEBP to PNG conversion"
+  },
+  "romfs/ui/cards/zhuge.png": {
+    "source": "extension/十周年UI/image/card/zhuge.webp",
+    "transform": "lossless WEBP to PNG conversion"
+  },
+  "romfs/ui/suits.ttf": {
+    "source": "font/suits.ttf",
+    "transform": "none"
+  }
+}
